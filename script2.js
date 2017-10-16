@@ -114,7 +114,7 @@ $(function(){
     // HTMLのid=sendmessageボタンをクリックすると実行
     var text = $('#message').val();
     // 入力文字列name、textを取得
-    var data = {'from': user_name, 'text': text};
+    var data = {'from': name, 'text': text};
 
     // 接続connを使って送信
     conn.send(data);
