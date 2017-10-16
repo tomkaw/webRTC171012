@@ -75,9 +75,9 @@ $(function(){
   function handleMessage(data){
     // ヘッダー、フッターのサイズを指定
     var header_plus_footer_height = 285;
-    // チャット内容を表示する欄の長さを指定
+    // チャット内容を表示する欄のピクセル数を取得
     var base_height = $(document).height() - header_plus_footer_height;
-    // HTMLのタグmessage-containerの長さを取得
+    // HTMLのタグmessage-containerのピクセル数を取得
     var messages_container_height = $('#messages-container').height();
     // 受信したデータを配列messagesに格納
     messages.push(data);
@@ -88,10 +88,10 @@ $(function(){
     $('#messages').html(html);
 
     // message-containerの長さが規定を超える
-    if(messages_container_height >= base_height){
+    //if(messages_container_height >= base_height){
       // ページトップへ移動
       $('html, body').animate({ scrollTop: $(document).height() }, 500);
-    }
+    //}
   }
 
   // メッセージの送信
