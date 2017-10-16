@@ -52,8 +52,8 @@ $(function(){
 
   // HTMLのボタンLoginをクリックしたときの動作
   $('#login').click(function(){
-    // HTMLで入力されたnameとpeer_idの値を変数に格納
-    name = $('#name').val();
+    // HTMLで入力されたuser_nameとpeer_idの値を変数に格納
+    name = $('#user_name').val();
     peer_id = $('#peer_id').val();
     // peer_idが入力されていれば実行
     if(peer_id){
