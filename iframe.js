@@ -1,4 +1,3 @@
-<script type="text/javascript">
 //-------- •Ï” --------//
 var name_DB_user = "el_user";
 
