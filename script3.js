@@ -49,6 +49,10 @@ $(function(){
     // HTMLのタグchatを表示、タグconnectを非表示にする
     $('#chat').removeClass('hidden');
     $('#connect').addClass('hidden');
+    // 同様にタグgreetを表示
+    $('#greet').removeClass('hidden');
+    // greeted_nameに自信が入力した名前を表示
+    $('#greeted_name').text(name);
   });
 
   // peer.connectで接続されたユーザのブラウザ上で実行される
