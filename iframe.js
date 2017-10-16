@@ -786,5 +786,3 @@ function AnswerCheck(answer, order) {
 // .then(function(data) {
 //    document.getElementById("message").innerHTML = "<audio id='sentence' controls='controls' preload='auto'>can't play...<source src='"+data.src+"' type='audio/mp3'>";
 // });
-
-</script>
