@@ -87,11 +87,11 @@ $(function(){
     // HTMLタグmessagesに表示
     $('#messages').html(html);
 
-    // message-containerの長さが規定を超える
-    //if(messages_container_height >= base_height){
-      // ページトップへ移動
+    // message-containerの長さが規定を超える ＝ 一番下に表示されているチャット入力欄がフレームアウト
+    if(messages_container_height >= base_height){
+      // ページの縦幅の値（ページの一番下）まで500msかけてスクロール
       $('html, body').animate({ scrollTop: $(document).height() }, 500);
-    //}
+    }
   }
 
   // メッセージの送信
