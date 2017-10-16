@@ -31,24 +31,24 @@ $(function(){
   						   navigator.webkitGetUserMedia || 
   						   navigator.mozGetUserMedia;
 
-  /* ビデオ関係の関数
-  function getVideo(callback){
-    navigator.mediaDevices.getUserMedia({audio: true, video: true}, callback, function(error){
-      console.log(error);
-      alert('An error occured. Please try again');
-    });
-  }
+  // ビデオ関係の関数
+  //function getVideo(callback){
+  //  navigator.mediaDevices.getUserMedia({audio: true, video: true}, callback, function(error){
+  //    console.log(error);
+  //    alert('An error occured. Please try again');
+  //  });
+  //}
 
-  getVideo(function(stream){
-    window.localStream = stream;
-    onReceiveStream(stream, 'my-camera');
-  });
+  //getVideo(function(stream){
+  //  window.localStream = stream;
+  //  onReceiveStream(stream, 'my-camera');
+  //});
 
-  function onReceiveStream(stream, element_id){
-    var video = $('#' + element_id + ' video')[0];
-    video.src = window.URL.createObjectURL(stream);
-    window.peer_stream = stream;
-  }*/
+  //function onReceiveStream(stream, element_id){
+  //  var video = $('#' + element_id + ' video')[0];
+  //  video.src = window.URL.createObjectURL(stream);
+  //  window.peer_stream = stream;
+  //}
 
   // HTMLのボタンLoginをクリックしたときの動作
   $('#login').click(function(){
@@ -133,27 +133,26 @@ $(function(){
   // HTMLのボタンsend-messageをクリックすることでも実行される
   $('#send-message').click(sendMessage);
 
-  /* コール
-  $('#call').click(function(){
-    console.log('now calling: ' + peer_id);
-    console.log(peer);
-    var call = peer.call(peer_id, window.localStream);
-    call.on('stream', function(stream){
-      window.peer_stream = stream;
-      onReceiveStream(stream, 'peer-camera');
-    });
-  });
+  // コール
+  //$('#call').click(function(){
+  //  console.log('now calling: ' + peer_id);
+  //  console.log(peer);
+  //  var call = peer.call(peer_id, window.localStream);
+  //  call.on('stream', function(stream){
+  //    window.peer_stream = stream;
+  //    onReceiveStream(stream, 'peer-camera');
+  //  });
+  //});
 
-  peer.on('call', function(call){
-    onReceiveCall(call);
-  });
+  //peer.on('call', function(call){
+  //  onReceiveCall(call);
+  //});
 
-  function onReceiveCall(call){
-    call.answer(window.localStream);
-    call.on('stream', function(stream){
-      window.peer_stream = stream;
-      onReceiveStream(stream, 'peer-camera');
-    });
-  }
-  */
+  //function onReceiveCall(call){
+  //  call.answer(window.localStream);
+  //  call.on('stream', function(stream){
+  //    window.peer_stream = stream;
+  //    onReceiveStream(stream, 'peer-camera');
+  //  });
+  //}
 });
